@@ -11,6 +11,7 @@ export class MoviesComponenet{
     title="Movie List"
     movies=Movies;
     selectedMovie!: Movie;
+    
     onSelect(movie:Movie):void {
         this.selectedMovie=movie;
     }
