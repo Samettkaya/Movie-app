@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Movie } from './movie';
 import { Movies } from './movie.datasource';
+import { Observable, of } from  'rxjs';
+import { LoggingService } from './logging.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,9 +10,10 @@ import { Movies } from './movie.datasource';
 export class MovieService {
 
 
-  constructor() { }
+  constructor(private loggingService:LoggingService) { }
 
-  getMovies():Movie[]{
-    return Movies
+  getMovies():Observable<Movie[]>{
+    this.loggingService.add("movieservice: listing movies")
+    return of(Movies)
   }
 }
