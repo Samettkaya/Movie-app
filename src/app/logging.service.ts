@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class LoggingService {
   messages:string[]=[]
 
-  add(messages:string){
+  add(messages: string){
     this.messages.push(messages)
   }
   clear(){

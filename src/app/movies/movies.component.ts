@@ -9,8 +9,8 @@ import {MovieService} from"../movie.service";
 export class MoviesComponenet{
 
     title="Movie List"
-    movies!: Movie[];
-    selectedMovie!: Movie;
+    movies: Movie[];
+    selectedMovie: Movie;
     
     constructor(private movieService:MovieService){}
 
